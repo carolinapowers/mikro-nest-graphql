@@ -1,0 +1,15 @@
+type CourseModule {
+  id: String!
+  title: String!
+  order: Int!
+}
+
+input CourseModuleInput {
+  title: String!
+  order: Int!
+  course_id: String!
+}
+
+type Mutation {
+  createCourseModule(attributes: CourseModuleInput!): CourseModule!
+}

@@ -1,0 +1,20 @@
+type Course {
+  id: String!
+  title: String!
+  description: String
+  status: String!
+}
+
+input CourseInput {
+  title: String!
+  description: String
+  status: String!
+}
+
+type Query {
+  courses: [Course!]!
+}
+
+type Mutation {
+  createCourse(attributes: CourseInput!): Course!
+}
